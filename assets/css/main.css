@@ -13,8 +13,6 @@
     width: 100%;
     padding: 20px 0;
     text-align: center;
-    position: fixed;
-    bottom: 0;
 }
 
 .footer .container {
@@ -40,4 +38,28 @@
 
 .footer a:hover {
     text-decoration: underline;
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.thumbnail-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.thumbnail-image {
+    max-width: 80px;
+    height: auto;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.thumbnail-image:hover {
+    border: 2px solid #007bff;
 }

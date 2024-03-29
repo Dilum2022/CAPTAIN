@@ -63,3 +63,15 @@
 .thumbnail-image:hover {
     border: 2px solid #007bff;
 }
+
+.cart-total {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Fixed position for the right column */
+.fixed-right-column {
+    position: sticky;
+    top: 60px;
+    /* Adjust this value based on your navbar height */
+}

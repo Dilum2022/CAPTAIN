@@ -24,28 +24,28 @@
                                 <h5 class="card-title">Blue Acid Wash Sleeveless Shirt</h5>
                         </a>
                         <p class="card-text">$19.99</p>
+                    </div>
+                    <div class="card-footer">
                         <a href="#" class="btn btn-danger"><i class="material-symbols-outlined">
                                 delete
                             </i></a>
                     </div>
                 </div>
-
             </div>
             <div class="col-md-3 col-6 mb-4">
-
-                    <div class="card">
+                <div class="card">
                     <a href="./singleProductView.php">
-                        <img src="https://th.bing.com/th/id/R.33172a65f3f64a5c59d43b61161e1ecd?rik=vlk5Xy4aFbXQmw&pid=ImgRaw&r=0" class="card-img-top" alt="Product Image">
+                        <img src="https://objectstorage.ap-mumbai-1.oraclecloud.com/n/softlogicbicloud/b/cdn/o/products/400-600/200367237--1--1681979167.jpeg" class="card-img-top" alt="Product Image">
                         <div class="card-body">
                             <h5 class="card-title">Blue Acid Wash Sleeveless Shirt</h5>
-                            </a>
-                            <p class="card-text">$19.99</p>
-                            <a href="#" class="btn btn-danger"><i class="material-symbols-outlined">
-                                    delete
-                                </i></a>
-                        </div>
-                    </div>
-             
+                    </a>
+                    <p class="card-text">$19.99</p>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-danger"><i class="material-symbols-outlined">
+                            delete
+                        </i></a>
+                </div>
             </div>
         </div>
         <div class="row d-none">

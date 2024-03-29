@@ -8,13 +8,14 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Home</a>
+                            <a class="nav-link" href="#"><i class="material-symbols-outlined">
+                                    shopping_cart
+                                </i></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
+                            <a class="nav-link" href="#"><i class="material-symbols-outlined">
+                                    favorite
+                                </i></a>
                         </li>
                     </ul>
                 </div>

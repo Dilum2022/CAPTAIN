@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&family=Rowdies:wght@300;400;700&display=swap');
 .signin-signup-container {
     margin-top: 100px;
 }
@@ -7,9 +9,8 @@
     padding: 15px;
     margin: 0 auto;
 }
-
 .footer {
-    background-color: #f8f9fa;
+    background-color: white; /* Set main background color to white */
     width: 100%;
     padding: 20px 0;
     text-align: center;
@@ -29,6 +30,15 @@
 
 .footer p {
     margin-bottom: 10px;
+    font-size: 14px; /* Adjust font size as needed */
+    font-family: Arial, sans-serif; /* Set font family */
+}
+
+.footer h5 {
+    margin-bottom: 15px;
+    font-size: 16px; /* Adjust font size as needed */
+    font-family: Arial, sans-serif; /* Set font family */
+    font-weight: bold;
 }
 
 .footer a {
@@ -38,6 +48,12 @@
 
 .footer a:hover {
     text-decoration: underline;
+}
+
+.footer .bottom-row {
+    background-color: black; /* Set bottom row background color to black */
+    padding: 10px 0;
+    color: white; /* Set font color to white */
 }
 
 .product-image {
@@ -75,3 +91,139 @@
     top: 60px;
     /* Adjust this value based on your navbar height */
 }
+
+
+
+
+.main-image-home{
+    height: 700px;
+    width: 100%;
+}
+
+
+@media (max-width: 767.98px) {
+    .main-image-home{
+        height: 400px;
+    }
+
+}
+
+.captain{
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 1000;
+ }
+
+
+ .nav-item {
+     margin-right: 10px;
+ }
+
+ .nav-link i.material-symbols-outlined {
+     color: black;
+     font-size: 20px; 
+ }
+ 
+
+ .nav-link{
+     color: black; 
+     font-size: 20px; 
+     text-decoration: none; 
+     transition: color 0.3s ease; 
+     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ }
+ 
+
+ .nav-link:hover {
+     color: gray;
+ }
+ 
+ .second-font{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+
+ }
+
+
+ .product-name{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    color: #000000;
+    
+ }
+
+
+ .card{
+    width: 100%;
+    height: 400px;
+ }
+
+
+ .card-img-top{
+    width: 100%;
+    height: 300px;
+ }
+
+
+
+ .main-box {
+    background-color: #8E75F5;
+    border-radius: 20px;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.center-icon {
+    display: block;
+    margin: 0 auto 10px; /* Center icon horizontally */
+}
+
+.topic {
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    font-family: "Rowdies", sans-serif;
+}
+
+
+
+.category-box {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.category-image {
+    width: 100%;
+    height: 450px;
+    transition: transform 0.3s ease;
+}
+
+.category-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    padding: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.category-box:hover .category-image {
+    transform: scale(1.1);
+}
+
+.category-box:hover .category-name {
+    opacity: 1;
+}
+
+
+

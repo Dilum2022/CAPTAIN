@@ -23,7 +23,7 @@
             <p>City, State, Country</p>
         </div>
     </div>
-    <div class="mt-3">
+    <div class="mt-3 bottom-row">
         <p>&copy; 2024 Captain</p>
     </div>
 </footer>

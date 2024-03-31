@@ -22,8 +22,10 @@
 
 <body>
     <div class="container">
+    <h2 class="text-center mb-2 mt-4 captain">CAPTAIN</h2>
         <form class="form-signup-signup">
-            <h2 class="text-center mb-4">Sign In</h2>
+            <h2 class="text-center mb-4 second-font">Sign In</h2>
+            <label for="inputName" class="form-label" >Full Name</label>
             <label for="inputEmail" class="visually-hidden">Email address</label>
             <input type="email" id="inputEmail" class="form-control mb-3" placeholder="Email address" required autofocus>
             <label for="inputPassword" class="visually-hidden">Password</label>
@@ -33,7 +35,7 @@
                     <input type="checkbox" value="remember-me"> Remember me
                 </label>
             </div>
-            <button class="w-100 btn btn-lg btn-dark" type="submit">Sign in</button>
+            <button class="w-100 btn btn-lg btn-dark" type="submit" onclick="signin();">Sign in</button>
             <p class="mt-3 mb-3 text-muted text-center">Create a new account<a href="./signup.php">Signup</a></p>
             <p class="mt-5 mb-3 text-muted text-center">&copy; 2024 captain</p>
         </form>
@@ -61,6 +63,7 @@
 
 <!-- modal -->
     <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>

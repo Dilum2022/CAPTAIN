@@ -27,7 +27,7 @@ include  "connection.php";
 
 <body>
     <div class="container">
-        <h2 class="text-center mb-4 captain">CAPTAIN</h2>
+        <h2 class="text-center mb-2 mt-4 captain">CAPTAIN</h2>
         <form class="form-signup-signup">
 
             <h2 class="text-center mb-4 second-font">Sign Up</h2>

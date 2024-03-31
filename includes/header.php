@@ -9,16 +9,16 @@
             <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
                 <ul class="navbar-nav d-lg-flex align-items-center mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Men</a>
+                        <a class="nav-link" href="categorypage.php">Men</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Women</a>
+                        <a class="nav-link" href="categorypage.php">Women</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Kids</a>
+                        <a class="nav-link" href="categorypage.php">Kids</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Sport</a>
+                        <a class="nav-link" href="categorypage.php">Sport</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav">
@@ -46,16 +46,16 @@
         <div class="offcanvas-body">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Men</a>
+                    <a class="nav-link" href="categorypage.php">Men</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Women</a>
+                    <a class="nav-link" href="categorypage.php">Women</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Kids</a>
+                    <a class="nav-link" href="categorypage.php">Kids</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Sport</a>
+                    <a class="nav-link" href="categorypage.php">Sport</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#"><i class="material-symbols-outlined">shopping_cart</i></a>

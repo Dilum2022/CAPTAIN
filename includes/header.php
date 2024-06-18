@@ -1,5 +1,27 @@
-<header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAPTAIN</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <!-- Custom CSS (if any) -->
+    <style>
+        /* Ensure the body is hidden until the CSS is loaded to prevent FOUC */
+        body {
+            visibility: hidden;
+        }
 
+        body.loaded {
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+<header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand captain" href="./">CAPTAIN</a>
@@ -23,14 +45,13 @@
                 </ul>
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="material-symbols-outlined">shopping_cart</i></a>
+                        <a class="nav-link" href="#"><i class="material-icons-outlined">shopping_cart</i></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="material-symbols-outlined">favorite</i></a>
+                        <a class="nav-link" href="#"><i class="material-icons-outlined">favorite</i></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="material-symbols-outlined">
-                                person</i></a>
+                        <a class="nav-link" href="#"><i class="material-icons-outlined">person</i></a>
                     </li>
                 </ul>
             </div>
@@ -58,16 +79,26 @@
                     <a class="nav-link" href="categorypage.php">Sport</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="material-symbols-outlined">shopping_cart</i></a>
+                    <a class="nav-link" href="#"><i class="material-icons-outlined">shopping_cart</i></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="material-symbols-outlined">favorite</i></a>
+                    <a class="nav-link" href="#"><i class="material-icons-outlined">favorite</i></a>
                 </li>
                 <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="material-symbols-outlined">
-                                person</i></a>
-                    </li>
+                    <a class="nav-link" href="#"><i class="material-icons-outlined">person</i></a>
+                </li>
             </ul>
         </div>
     </div>
 </header>
+
+<!-- Bootstrap JS Bundle (includes Popper) -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Ensure the body is visible only after the CSS is loaded
+    window.addEventListener('load', function() {
+        document.body.classList.add('loaded');
+    });
+</script>
+</body>
+</html>

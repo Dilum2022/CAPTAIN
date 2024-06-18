@@ -56,6 +56,7 @@
                         </div>
                         <div class="d-flex">
                         <button type="submit" class="btn btn-dark">Add to Cart</button>
+                        <button onclick="">buy now</button>
                         <button type="submit" class="btn btn-dark fs-5 d-flex justify-content-center align-items-center mx-3"><i class="material-symbols-outlined">
                                 favorite
                             </i></button>

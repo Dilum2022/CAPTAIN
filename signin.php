@@ -22,46 +22,43 @@
 
 <body>
     <div class="container">
-    <h2 class="text-center mb-2 mt-4 captain">CAPTAIN</h2>
-        <form class="form-signup-signup">
+        <h2 class="text-center mb-2 mt-4 captain">CAPTAIN</h2>
+        <form id="signinForm" class="form-signup-signup" onsubmit="return false;">
             <h2 class="text-center mb-4 second-font">Sign In</h2>
-            <label for="inputName" class="form-label" >Full Name</label>
-            <label for="inputEmail" class="visually-hidden">Email address</label>
-            <input type="email" id="inputEmail" class="form-control mb-3" placeholder="Email address" required autofocus>
-            <label for="inputPassword" class="visually-hidden">Password</label>
-            <input type="password" id="inputPassword" class="form-control mb-3" placeholder="Password" required>
+            <label for="inputEmail" class="form-label">Email address</label>
+            <input type="email" id="inputEmail" name="email" class="form-control mb-3" placeholder="Email address" required autofocus>
+            <label for="inputPassword" class="form-label">Password</label>
+            <input type="password" id="inputPassword" name="password" class="form-control mb-3" placeholder="Password" required>
             <div class="checkbox mb-3">
                 <label>
-                    <input type="checkbox" value="remember-me"> Remember me
+                    <input type="checkbox" id="rememberMe" name="rememberMe" value="remember-me"> Remember me
                 </label>
             </div>
-            <button class="w-100 btn btn-lg btn-dark" type="submit" onclick="signin();">Sign in</button>
-            <p class="mt-3 mb-3 text-muted text-center">Create a new account<a href="./signup.php">Signup</a></p>
+            <button class="w-100 btn btn-lg btn-dark" type="button" onclick="signin();">Sign in</button>
+            <p class="mt-3 mb-3 text-muted text-center">Create a new account <a href="./signup.php">Signup</a></p>
             <p class="mt-5 mb-3 text-muted text-center">&copy; 2024 captain</p>
         </form>
     </div>
 
-<!-- modal -->
-
-<div class="modal" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <p>Modal body text goes here.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+    <!-- Modal -->
+    <div class="modal" id="responseModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sign In Response</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="modalBodyText"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
+    <!-- Modal -->
 
-<!-- modal -->
     <script src="./assets/js/bootstrap.min.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>

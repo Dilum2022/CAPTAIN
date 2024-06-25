@@ -17,21 +17,49 @@
             align-items: center;
             height: 100vh;
         }
+        .password-wrapper {
+            position: relative;
+        }
+        .toggle-password {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
     </style>
 </head>
 
 <body>
-    <div class="container">
+  
+
+    <?php
+    $email = "";
+    $password = "";
+
+    if (isset($_COOKIE["email"])){
+        $email = $_COOKIE['email'];
+     }
+
+     if (isset(($_COOKIE[$password]))){
+        $password= $_COOKIE["password"];
+     }
+    
+    ?>
+      <div class="container">
         <h2 class="text-center mb-2 mt-4 captain">CAPTAIN</h2>
         <form id="signinForm" class="form-signup-signup" onsubmit="return false;">
             <h2 class="text-center mb-4 second-font">Sign In</h2>
             <label for="inputEmail" class="form-label">Email address</label>
-            <input type="email" id="inputEmail" name="email" class="form-control mb-3" placeholder="Email address" required autofocus>
+            <input type="email" id="inputEmail" name="email" class="form-control mb-3" placeholder="Email address" value=" <?php echo $email;?>">
             <label for="inputPassword" class="form-label">Password</label>
-            <input type="password" id="inputPassword" name="password" class="form-control mb-3" placeholder="Password" required>
+            <div class="form-group password-wrapper">
+                <input type="password" id="inputPassword" name="password" class="form-control mb-3" placeholder="Password" required value="<?php echo $password;?>">
+                <span class="material-symbols-outlined toggle-password" id="togglePassword">visibility</span>
+            </div>
             <div class="checkbox mb-3">
                 <label>
-                    <input type="checkbox" id="rememberMe" name="rememberMe" value="remember-me"> Remember me
+                    <input type="checkbox" id="rememberme" name="rememberMe" value="remember-me"> Remember me
                 </label>
             </div>
             <button class="w-100 btn btn-lg btn-dark" type="button" onclick="signin();">Sign in</button>

@@ -13,15 +13,17 @@
 <body>
     <?php require_once "./includes/header.php" ?>
 
+
+
     <div class="container-fluid">
         <div class="row">
             <!-- Filter and Sorting Section -->
-             <div class="col-lg-3 ">
-                <div class="filter-section">
-                    <h2>Filter</h2>
+            <div class="col-lg-3 filter-section d-none d-lg-block">
+                <div>
+                    <label class="font-size-medium mt-2">Filter</label>
                     <!-- Filter options -->
-                    <div class="form-group">
-                        <label for="category">Category:</label>
+                    <div class="form-group mt-2">
+                        <label for="category" class="font-size-small">Category:</label>
                         <select class="form-control" id="category">
                             <option>Men</option>
                             <option>Women</option>
@@ -30,112 +32,178 @@
                         </select>
                     </div>
                     <!-- Sorting options -->
-                    <div class="form-group">
-                        <label for="sorting">Sort By:</label>
-                        <select class="form-control" id="sorting">
+                    <div class="form-group mt-2">
+                        <label for="size" class="font-size-small">Size</label>
+                        <select class="form-control" id="size">
+                            <option>Small</option>
+                            <option>Medium</option>
+                            <option>Large</option>
+                        </select>
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="color" class="font-size-small">Color</label>
+                        <select class="form-control" id="color">
+                            <option>Black</option>
+                            <option>White</option>
+                            <option>Red</option>
+                        </select>
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="price" class="font-size-small">Price</label>
+                        <select class="form-control filter-input" id="price">
                             <option>Newest</option>
                             <option>Price: Low to High</option>
                             <option>Price: High to Low</option>
                         </select>
                     </div>
-
-                    <div class="form-group">
-                        <label for="sorting">Sort By:</label>
-                        <select class="form-control" id="sorting">
-                            <option>Newest</option>
-                            <option>Price: Low to High</option>
-                            <option>Price: High to Low</option>
-                        </select>
-                    </div>
-
-
-                    <div class="form-group">
-                        <label for="sorting">Sort By:</label>
-                        <select class="form-control" id="sorting">
-                            <option>Newest</option>
-                            <option>Price: Low to High</option>
-                            <option>Price: High to Low</option>
-                        </select>
-                    </div>
-
-
-
-                    <label for="customRange1" class="form-label">Example range</label>
+                    <label for="customRange1" class="form-label mt-2">Example range</label>
                     <input type="range" class="form-range" id="customRange1">
+                    <button class="btn btn-dark mt-2">Filter</button>
                 </div>
+            </div>
+
+            <!-- Filter Button for Mobile View -->
+            <div class="col-12 d-lg-none text-right mb-2">
+                <button type="button" class="btn " data-toggle="modal" data-target="#exampleModal">
+                    <img src="image\icon\filter.png" alt="" class="filter_icon">
+                    <b>Filter</b>
+                </button>
             </div>
 
             <!-- Product Display Section -->
             <div class="col-lg-9">
-
-
-                <div class="container-fluid">
-                
-                    <img src="image\category\The_Classic_T-Shirt_Styles_for_Men.webp" class="" alt="..." width="100%">
+                <div class="container-fluid mt-1">
+                    <label class="font-size-medium mt-0">Mens</label>
+                    <img src="image/category/The_Classic_T-Shirt_Styles_for_Men.webp" class="img-fluid" alt="..." width="100%">
                 </div>
                 <div class="product-section">
                     <div class="row">
                         <!-- Product Cards -->
-                        <div class="container-fluid">
-                        <h4 class="mt-4 mb-4 second-font">New Arrival</h4>
+                        <div class="container">
+                            <h4 class="mt-4 mb-4 font-size-medium">New Arrival</h4>
                             <div class="row">
                                 <div class="col-md-3 col-6 mb-4">
                                     <div class="card">
-                                        <a href="#">
+                                        <a href="singleProductView.php">
                                             <img src="image/t shirt/tshirt3.jpg" class="card-img-top" alt="Product Image">
                                             <div class="card-body">
-                                                <h5 class="product-name">Blue Acid Wash Sleeveless</h5>
+                                                <h5 class="product-name font-size-small">Blue Acid Wash Sleeveless</h5>
                                         </a>
                                         <p class="card-text">$19.99</p>
                                     </div>
                                 </div>
                             </div>
-
                             <div class="col-md-3 col-6 mb-4">
                                 <div class="card">
-                                    <a href="#">
+                                    <a href="singleProductView.php">
                                         <img src="image/t shirt/tshirt4.jpg" class="card-img-top" alt="Product Image">
                                         <div class="card-body">
-                                            <h5 class="product-name">Captain T-shirt Men</h5>
+                                            <h5 class="product-name font-size-small">Captain T-shirt Men</h5>
                                     </a>
                                     <p class="card-text">$19.99</p>
                                 </div>
                             </div>
                         </div>
-
                         <div class="col-md-3 col-6 mb-4">
                             <div class="card">
-                                <a href="#">
-                                    <img src="image\t shirt\SLASHER-Website-1_22163099-9b7e-43c8-963a-05176dfbe4b8.webp" class="card-img-top" alt="Product Image">
+                                <a href="singleProductView.php">
+                                    <img src="image/t shirt/SLASHER-Website-1_22163099-9b7e-43c8-963a-05176dfbe4b8.webp" class="card-img-top" alt="Product Image">
                                     <div class="card-body">
-                                        <h5 class="product-name">Captain T-shirt Men</h5>
+                                        <h5 class="product-name font-size-small">Captain T-shirt Men</h5>
                                 </a>
                                 <p class="card-text">$19.99</p>
                             </div>
                         </div>
                     </div>
-
                     <div class="col-md-3 col-6 mb-4">
                         <div class="card">
-                            <a href="#">
+                            <a href="singleProductView.php">
                                 <img src="image/t shirt/tshirt6.webp" class="card-img-top" alt="Product Image">
                                 <div class="card-body">
-                                    <h5 class="product-name">Captain T-shirt Men</h5>
+                                    <h5 class="product-name font-size-small">Captain T-shirt Men</h5>
                             </a>
                             <p class="card-text">$19.99</p>
                         </div>
                     </div>
                 </div>
-                
             </div>
         </div>
-        <!-- Repeat product cards for each product -->
-    </div>
-    </div>
-    </div>
     </div>
     </div>
 
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"><b>Filter</b></h5>
+
+                </div>
+                <div class="modal-body">
+
+                    <div class="form-group mt-1">
+                        <label for="category" class="font-size-small">Category:</label>
+                        <select class="form-control" id="category">
+                            <option>Men</option>
+                            <option>Women</option>
+                            <option>Kids</option>
+                            <option>Sport</option>
+                        </select>
+                    </div>
+                    <!-- Sorting options -->
+                    <div class="form-group mt-1">
+                        <label for="size" class="font-size-small">Size</label>
+                        <select class="form-control" id="size">
+                            <option>Small</option>
+                            <option>Medium</option>
+                            <option>Large</option>
+                        </select>
+                    </div>
+                    <div class="form-group mt-1">
+                        <label for="color" class="font-size-small">Color</label>
+                        <select class="form-control" id="color">
+                            <option>Black</option>
+                            <option>White</option>
+                            <option>Red</option>
+                        </select>
+                    </div>
+                    <div class="form-group mt-1">
+                        <label for="price" class="font-size-small">Price</label>
+                        <select class="form-control filter-input" id="price">
+                            <option>Newest</option>
+                            <option>Price: Low to High</option>
+                            <option>Price: High to Low</option>
+                        </select>
+                    </div>
+                    <label for="customRange1" class="form-label mt-1">Example range</label>
+                    <input type="range" class="form-range" id="customRange1">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button class="btn btn-dark mt-2">Filter</button>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+    </div>
+
+
+
+    <!-- Include Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

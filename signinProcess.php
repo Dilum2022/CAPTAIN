@@ -1,39 +1,40 @@
 <?php
+session_start();
 include "connection.php";
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $email = $_POST["email"] ?? null;
-    $password = $_POST["password"] ?? null;
-    $rememberMe = $_POST["rememberMe"] ?? false;
+$email = $_POST["e"];
+$password = $_POST["p"];
+$rememberme = $_POST["r"];
 
-    if (empty($email)) {
-        echo "Please enter your email address.";
-    } else if (empty($password)) {
-        echo "Please enter your password.";
-    } else {
-        $email = $connection->real_escape_string($email);
-        $password = $connection->real_escape_string($password);
+if(empty($email)){
+    echo ("Please Enter Your Email Address.");
+}else if(empty($password)){
+    echo ("Please Enter Your Password.");
+}else{
 
-        $result = Database::search("SELECT * FROM `user` WHERE `email`='$email'");
-        if ($result->num_rows == 1) {
-            $user = $result->fetch_assoc();
-            if (password_verify($password, $user['password'])) {
-                session_start();
-                $_SESSION['user_id'] = $user['user_id'];
-                $_SESSION['user_email'] = $user['email'];
-                $_SESSION['user_fname'] = $user['fname'];
-                
-                if ($rememberMe) {
-                    setcookie("user_id", $user['user_id'], time() + (86400 * 30), "/");
-                }
-                
-                echo "Sign-in successful. Welcome, " . $user['fname'] . "!";
-            } else {
-                echo "Invalid password.";
-            }
-        } else {
-            echo "No account found with that email address.";
+    $rs = Database::search("SELECT * FROM `user` WHERE `email`='".$email."' AND `password`='".$password."'");
+    $n = $rs->num_rows;
+
+    if($n == 1){
+
+        echo ("success");
+        $d = $rs->fetch_assoc();
+        $_SESSION["u"] = $d;
+
+        if($rememberme == "true"){
+
+            setcookie("email",$email,time()+(60*60*24*365));
+            setcookie("password",$password,time()+(60*60*24*365));
+
+        }else{
+
+            setcookie("email","",-1);
+            setcookie("password","",-1);
+
         }
+
+    }else{
+        echo ("Invalid Username or Password.");
     }
+
 }
-?>

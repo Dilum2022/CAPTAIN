@@ -1,11 +1,8 @@
 <?php
-
-include  "connection.php";
-
+include "connection.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,12 +21,10 @@ include  "connection.php";
         }
     </style>
 </head>
-
 <body>
 <div class="container">
     <h2 class="text-center mb-2 mt-4 captain">CAPTAIN</h2>
     <form class="form-signup-signup" id="signupForm" method="post" enctype="multipart/form-data">
-
         <h2 class="text-center mb-4 second-font">Sign Up</h2>
         <div class="mb-3">
             <label for="fname" class="form-label">First Name</label>
@@ -43,14 +38,16 @@ include  "connection.php";
             <label for="email" class="form-label">Email address</label>
             <input type="email" id="email" name="e" class="form-control" placeholder="Enter your email address" required>
         </div>
-
+        <div class="mb-3">
+            <label for="mobile" class="form-label">Mobile Number</label>
+            <input type="text" id="mobile" name="m" class="form-control" placeholder="Enter your mobile number" required>
+        </div>
         <div class="mb-3">
             <label for="gender" class="form-label">Gender</label>
             <select class="form-select" id="gender" name="g">
                 <?php
                 $rs = Database::search("SELECT * FROM `gender`");
                 $num = $rs->num_rows;
-
                 for ($x = 0; $x < $num; $x++) {
                     $data = $rs->fetch_assoc();
                 ?>
@@ -62,22 +59,16 @@ include  "connection.php";
                 ?>
             </select>
         </div>
-
         <div class="mb-3">
             <label for="password" class="form-label">Password</label>
             <input type="password" id="password" name="p" class="form-control" placeholder="Enter your password" required>
         </div>
-
         <button class="w-100 btn btn-lg btn-dark" type="button" onclick="signup();">Sign up</button>
-
         <p class="mt-3 mb-3 text-muted text-center">Already have an account? <a href="./signin.php">Sign in</a></p>
         <p class="mt-5 mb-3 text-muted text-center">&copy; 2024 captain</p>
     </form>
 </div>
-
-    <script src="./assets/js/bootstrap.min.js"></script>
-    <script src="./assets/js/script.js"></script>
-
+<script src="./assets/js/bootstrap.min.js"></script>
+<script src="./assets/js/script.js"></script>
 </body>
-
 </html>

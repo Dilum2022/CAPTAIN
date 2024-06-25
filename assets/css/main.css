@@ -1,5 +1,82 @@
 @import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&family=Rowdies:wght@300;400;700&display=swap');
+
+/* Base font sizes */
+.font-size-small {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 14px;
+}
+
+.font-size-medium {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+}
+
+.font-size-large {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+}
+
+/* Responsive font sizes for small screens */
+@media (min-width: 576px) {
+    .font-size-small {
+        font-size: 14px;
+    }
+
+    .font-size-medium {
+        font-size: 18px;
+    }
+
+    .font-size-large {
+        font-size: 22px;
+    }
+}
+
+/* Responsive font sizes for medium screens */
+@media (min-width: 768px) {
+    .font-size-small {
+        font-size: 16px;
+    }
+
+    .font-size-medium {
+        font-size: 20px;
+    }
+
+    .font-size-large {
+        font-size: 24px;
+    }
+}
+
+/* Responsive font sizes for large screens */
+@media (min-width: 992px) {
+    .font-size-small {
+        font-size: 18px;
+    }
+
+    .font-size-medium {
+        font-size: 22px;
+    }
+
+    .font-size-large {
+        font-size: 26px;
+    }
+}
+
+/* Responsive font sizes for extra large screens */
+@media (min-width: 1200px) {
+    .font-size-small {
+        font-size: 20px;
+    }
+
+    .font-size-medium {
+        font-size: 24px;
+    }
+
+    .font-size-large {
+        font-size: 28px;
+    }
+}
+
 .signin-signup-container {
     margin-top: 100px;
 }
@@ -60,6 +137,7 @@
     max-width: 100%;
     height: auto;
     margin-bottom: 20px;
+    text-decoration: none;
 }
 
 .thumbnail-images {
@@ -92,83 +170,66 @@
     /* Adjust this value based on your navbar height */
 }
 
-
-
-
-.main-image-home{
+.main-image-home {
     height: 700px;
     width: 100%;
 }
 
-
 @media (max-width: 767.98px) {
-    .main-image-home{
+    .main-image-home {
         height: 400px;
     }
-
 }
 
-.captain{
+.captain {
     color: rgb(0, 0, 0);
     font-size: 30px;
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
     font-weight: 1000;
- }
+}
 
+.nav-item {
+    margin-right: 10px;
+}
 
- .nav-item {
-     margin-right: 10px;
- }
+.nav-link i.material-symbols-outlined {
+    color: black;
+    font-size: 20px;
+}
 
- .nav-link i.material-symbols-outlined {
-     color: black;
-     font-size: 20px; 
- }
- 
+.nav-link {
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 
- .nav-link{
-     color: black; 
-     font-size: 20px; 
-     text-decoration: none; 
-     transition: color 0.3s ease; 
-     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
- }
- 
+.nav-link:hover {
+    color: gray;
+}
 
- .nav-link:hover {
-     color: gray;
- }
- 
- .second-font{
+.second-font {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 20px;
+}
 
- }
-
-
- .product-name{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 18px;
+.product-name {
     text-decoration: none;
     color: #000000;
-    
- }
+}
 
-
- .card{
+.card {
     width: 100%;
     height: 400px;
- }
+}
 
-
- .card-img-top{
+.card-img-top {
     width: 100%;
     height: 300px;
- }
+}
 
-
-
- .main-box {
+.main-box {
     background-color: #8E75F5;
     border-radius: 20px;
     text-align: center;
@@ -182,13 +243,10 @@
 }
 
 .topic {
-    font-size: 16px;
     color: white;
     font-weight: bold;
     font-family: "Rowdies", sans-serif;
 }
-
-
 
 .category-box {
     position: relative;
@@ -198,8 +256,22 @@
 
 .category-image {
     width: 100%;
-    height: 450px;
+    height: 350px;
     transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .category-image {
+        height: 250px;
+    }
+    .card {
+        width: 100%;
+        height: 300px;
+    }
+    .card-img-top {
+        width: 100%;
+        height: 200px;
+    }
 }
 
 .category-name {
@@ -225,5 +297,23 @@
     opacity: 1;
 }
 
+.filter-section {
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+}
+
+@media (max-width: 768px) {
+    .filter-section {
+        background-color: rgb(255, 255, 255);
+        height: 40vh;
+    }
+
+    .filter-input {
+        max-width: 60%;
+    }
+}
 
 
+.filter_icon{
+    width: 20px;
+}
